@@ -11,3 +11,4 @@ pandas==1.0.1
 scipy==1.4.1
 widgetsnbextension==3.5.1
 virtualenv==20.0.10
+hide-code==0.5.5
