@@ -12,3 +12,4 @@ scipy==1.4.1
 widgetsnbextension==3.5.1
 virtualenv==20.0.10
 hide-code==0.5.5
+jupyter-contrib-nbextensions==0.5.0
