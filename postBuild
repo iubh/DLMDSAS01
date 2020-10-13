@@ -1,2 +1,4 @@
 jupyter contrib nbextension install --user
 jupyter nbextension enable hide_all_input/main
+
+jupyter labextension install jupyter-matplotlib@0.7.0
