@@ -1,10 +1,10 @@
-jupyter contrib nbextension install --user
-jupyter nbextension enable hide_all_input/main
-
-pip install ipympl
-pip install --upgrade jupyterlab
+#jupyter contrib nbextension install --user
 
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install jupyter-matplotlib
 
 jupyter nbextension enable --py widgetsnbextension
+jupyter nbextension enable hide_all_input/main
+
+# If you already installed the @jupyter-widgets/jupyterlab-manager extension, you will still need to rebuild JupyterLab after you installed ipympl
+jupyter lab build
