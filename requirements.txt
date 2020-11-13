@@ -4,6 +4,7 @@
 #
 #    pip-compile
 #
+terminado==0.9.1 
 appdirs==1.4.4            # via virtualenv
 argon2-cffi==20.1.0       # via notebook
 async-generator==1.10     # via nbclient
