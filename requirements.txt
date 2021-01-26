@@ -1,22 +1,13 @@
-# jupyet modules
+# jupyter modules
 #
-ipykernel==5.3.2
-ipython==7.19.0
 ipywidgets==7.5.1
-jupyter==1.0.0
 jupyterlab==2.2.9
-nbconvert==5.6.1
-nbformat==5.0.7
-notebook==6.1.5
-widgetsnbextension==3.5.1
+#
 #
 # additional python modules
 #
-bqplot==0.12.19
 ipympl==0.5.8
 matplotlib==3.3.1
-numpy==1.19.3 # version 1.19.4 does not work on windows machines
-pandas==1.0.5
-scipy==1.5.1
-virtualenv==20.1.0
-#
+# numpy==1.19.3  # version 1.19.4 does not work on windows machines
+pandas==1.2.1
+scipy==1.6.0
