@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}    \usepackage{wrapfig}
+\usepackage{amssymb}
+\newcommand\R{{\mathbb R}}
+
+\begin{document}
+\title{Transformation of a bivariate $\Gamma$-distribution}
+\date{2020-02-04}
+
+\author{Paul Libbrecht, IUBH Advanced Statistics, \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY}}
+\maketitle
+
+
+
+% =================================================
+
+\section{Statement}
+
+Let $X$ and $Y$ be independent random variables $\sim\Gamma(2,5)$; we call $f_X$ and $f_Y$ their density function.
+Compute the density function of the variable $T=X+Y$.
+
+\section{Straight of the theory}
+
+$X$ and $Y$ are random variables, that is they are $X:{\mathcal S}\longrightarrow \R^+$ and $Y:{\mathcal S}\longrightarrow \R^+$.
+They are Gamma variables of parameters $\alpha=2$ and $\beta=5$ (see \cite{Wikipedia-Gamma}), thus, they are distributed in such a way that given a set of real-numbers $E$:
+
+$$P(Y\in E) = P(X\in E) 
+  = \int_{t\in E} \frac{\beta^\alpha}{\Gamma({\alpha})}t^{\alpha-1}e^{-\beta t}dt 
+  = \int_{t\in E} \frac{5^2}{1} t e^{-5t}dt 
+  = \int_{t\in E}25te^{-5t}dt$$
+  
+Let us call $f_X(t)=f_Y(t) = 25te^{-5t}$.
+
+% ===================================================
+\section{Calculation with a transformation}
+
+Introduce the transformation 
+
+$$g: \R^+ \times \R^+ \longrightarrow O$$
+$$	(x,y) \mapsto (x+y, x-y)$$ 
+
+This transformation is  a bijection if $O$ is defined to be\begin{wrapfigure}{r}{47mm}\includegraphics[width=45mm]{transformation-domain}\vspace{-4mm}\end{wrapfigure}
+
+$$O = \{ (a,b)\in\R^2 \mid a+b \geq 0 \mbox{ and } a-b\geq 0\}$$
+
+Its inverse is:
+
+$$ g^{-1}: O \longrightarrow \R^+ \times \R^+$$
+$$ (a,b) \mapsto \left( \frac{1}{2} (a+b), \frac{1}{2}(a-b) \right)$$
+
+because $g^{-1} (g(x,y)) = g^{-1}(x+y, x-y) = \left ( \frac{1}{2} (x+y+x-y), \frac{1}{2} ( x+y-x+y) \right ) = \left ( \frac{1}{2} 2x, \frac{1}{2} 2y\right ) = (x,y)$
+
+
+We apply the multivariate transformation theorem (\cite[2.7]{Hogg-McKean}) and thus compute the Jacobian:
+
+\newcommand{\half}{\frac{1}{2}}
+
+$$J_{g^{-1}} =  
+   \frac{\partial g^{-1}_1}{\partial a}\cdot\frac{\partial g^{-1}_2}{\partial b}- \frac{\partial g^{-1}_2}{\partial a}\cdot\frac{\partial g^{-1}_1}{\partial b}
+    = \half\cdot-\half-\half\cdot\half=-\frac{1}{2}$$
+
+The joint density of $(X,Y)$ is $f_{X,Y}(x,y) = f_X(x)\cdot f_Y(y)$ as the variables are independent.
+
+The theorem thus states that the joint density of $g(X,Y)$ is:
+
+$$ f_{A,B}(a,b) = f_{X,Y}\left( g_1^{-1}(a,b), g_2^{-1}(a,b)\right) \cdot | J_{g^{-1}} | $$
+$$ = |-\frac{1}{2}|\cdot f_X(\frac{1}{2}(a+b))\cdot f_Y(\frac{1}{2}(a-b))$$
+
+$$ = \frac{1}{2} \cdot 25(\frac{1}{2}(a+b))e^{-\frac{5}{2}(a+b)} 
+           \cdot 25(\frac{1}{2}(a-b))e^{-\frac{5}{2}(a-b)} = $$
+
+then we can compute the density of the variable $A$ which is $X+Y$ as a marginal distribution: 
+
+$$f_A(a) = \int_{b\in\R^+} f_{A,B}(a,b) db = \int _{-a}^{a} \frac{1}{2} \cdot 25(\frac{1}{2}(a+b))e^{-\frac{5}{2}(a+b)} 
+           \cdot 25(\frac{1}{2}(a-b))e^{-\frac{5}{2}(a-b)} = $$
+      
+\subsection{Result}
+
+The random variable $T=X+Y$ is the same as the random variable $A = g_1(X,Y)$. Its density is given by:
+           
+           $$ \frac{625}{6} a^3 e^{-5 a} $$
+
+as computed on WolframAlpha~\cite{wolfram-alpha} with:
+
+\begin{verbatim}
+  integral between -a to a of  (1/2)*25*(1/2)*(a+b)*e^(-2.5*(a+b)) 
+  * 25/2*(a-b)*e^(-2.5*(a-b))db
+\end{verbatim}
+
+
+\bibliographystyle{alpha}
+\bibliography{transformation}
+
+
+
+\end{document}

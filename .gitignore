@@ -1,0 +1,14 @@
+*.log
+*.bbl
+*.blg
+*.aux
+*.out
+.DS_Store
+
+*.iml
+*.ipr
+.idea
+_site
+target
+.sass-cache
+node_modules
