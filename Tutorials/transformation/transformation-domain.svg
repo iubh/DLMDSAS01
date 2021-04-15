@@ -53,8 +53,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.88"
-     inkscape:cx="285.01684"
-     inkscape:cy="275.99327"
+     inkscape:cx="376.36334"
+     inkscape:cy="437.35691"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -72,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -85,40 +85,62 @@
        d="m 200.32738,117.17262 h -93.7381 V 24.190476"
        id="path10" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.965;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="M 172.87213,50.889779 106.58928,117.17262 40.840979,51.42432"
+       style="fill:none;stroke:#000000;stroke-width:0.965;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 172.87212,183.45547 -66.28284,-66.28285 65.7483,-65.748301"
        id="path12"
-       inkscape:transform-center-x="-28.72619"
-       inkscape:transform-center-y="27.923466" />
+       inkscape:transform-center-x="27.923466"
+       inkscape:transform-center-y="28.726191" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 59.598064,58.039069 93.361392,45.411228"
+       d="m 163.23374,67.058629 12.62784,33.763331"
        id="path1177"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 93.572968,99.482453 134.25154,88.057254"
+       d="m 121.79036,101.03353 11.4252,40.67858"
        id="path1179"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 85.61097,91.853888 142.826,72.912198"
+       d="m 129.41892,93.071535 18.94169,57.215035"
        id="path1181"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 63.551223,65.934254 123.47222,44.587189"
+       d="m 155.33856,71.011788 21.34706,59.921002"
        id="path1183"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 76.268149,82.838189 159.94151,55.177204"
+       d="m 138.43462,83.728714 27.66099,83.673366"
        id="path1185"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 70.366248,73.862846 140.81044,48.306501"
+       d="m 147.40997,77.826813 25.55634,70.444197"
        id="path1187"
        sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="186.11032"
+       y="115.41846"
+       id="text864"><tspan
+         sodipodi:role="line"
+         id="tspan862"
+         x="186.11032"
+         y="115.41846"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:STIXGeneral;-inkscape-font-specification:'STIXGeneral, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">a</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="108.5393"
+       y="38.148098"
+       id="text868"><tspan
+         sodipodi:role="line"
+         id="tspan866"
+         x="108.5393"
+         y="38.148098"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:STIXGeneral;-inkscape-font-specification:'STIXGeneral, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">b</tspan></text>
   </g>
 </svg>

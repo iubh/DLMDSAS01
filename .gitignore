@@ -4,7 +4,7 @@
 *.aux
 *.out
 .DS_Store
-
+*.synctex.gz
 *.iml
 *.ipr
 .idea

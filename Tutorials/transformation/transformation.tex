@@ -1,8 +1,12 @@
 \documentclass{article}
 \usepackage[hidelinks]{hyperref}
-\usepackage{graphicx}    \usepackage{wrapfig}
+\usepackage{graphicx}    
+\usepackage{wrapfig}
+\usepackage{amsmath}
 \usepackage{amssymb}
-\newcommand\R{{\mathbb R}}
+\newcommand\R{{\mathbb R} }
+\renewcommand\S{{\mathcal S}}
+\newcommand\goesto{{\longrightarrow}}
 
 \begin{document}
 \title{Transformation of a bivariate $\Gamma$-distribution}
@@ -22,7 +26,7 @@ Compute the density function of the variable $T=X+Y$.
 
 \section{Straight of the theory}
 
-$X$ and $Y$ are random variables, that is they are $X:{\mathcal S}\longrightarrow \R^+$ and $Y:{\mathcal S}\longrightarrow \R^+$.
+$X$ and $Y$ are random variables, that is they are $X:\S \longrightarrow \R^+$ and $Y:{\S }\longrightarrow \R^+$.
 They are Gamma variables of parameters $\alpha=2$ and $\beta=5$ (see \cite{Wikipedia-Gamma}), thus, they are distributed in such a way that given a set of real-numbers $E$:
 
 $$P(Y\in E) = P(X\in E) 
@@ -33,21 +37,47 @@ $$P(Y\in E) = P(X\in E)
 Let us call $f_X(t)=f_Y(t) = 25te^{-5t}$.
 
 % ===================================================
+\section{Transformations?}
+
+
+
+Given a multivariate continuous random variable $X: {\S } \rightarrow D$ (having values in any set) and a mapping $g: D \rightarrow E$ a mapping, the {\bf transformed random variable} $g \circ X$, often written as $g(X)$ is defined by $g(X)(s) = g(X(s))$.  
+
+We assume $E,D\subset \R^n$. Then this is the same as saying: given a series of random variables $X_i: \S \goesto \R$ where $0\le i \le n$ and $(X_1, \dots, X_n) \in D$ and a series of functions $g_i: \R^n \goesto \R$ where $(g_1(x_1,\dots,x_n), \dots, g_n(x_1,\dots,x_n))\in E$ when $(x_1,\dots, x_n)\in E$.
+
+Suppose that $D$ and $E$ are subsets of $\R^n$ and that $g$ is a derivable tranformation (which means: $g_i(x_1,...,x_n)$ is derivable, i.e. $\frac{\partial g_i}{\partial x_j}$ exists for each $0 \le i,j  \le n$).  
+
+The transformation theorem, proved in \cite[2.7]{Hogg-McKean}, says that:
+
+\begin{itemize}
+\item $g(X)$ It is a continuous random variable.
+\item if $D, E \subset \R ^n$ and $X$ is a continuous random variable with pdf $f_X:D \rightarrow \R $ then the pdf of
+  $g(X)$, noted $f_{g(X)}$, is equal to the following, $\forall {\mathbf a} \in E$:
+\end{itemize}
+
+$$  f_{g(x)}({\mathbf a}) = f_X(g^{-1}({\mathbf a})) \cdot | J_{g^{-1}}({\mathbf a})|$$
+
+It is important to note that $D$ and $E$ are rarely equal to complete $\R^n$. E.g. It could be a subset of a plane where the lowest $x$ depends on $y$.
+
+% ===================================================
 \section{Calculation with a transformation}
 
 Introduce the transformation 
 
-$$g: \R^+ \times \R^+ \longrightarrow O$$
-$$	(x,y) \mapsto (x+y, x-y)$$ 
+\begin{alignat*}{2}
+g:\quad & \R^+ \times \R^+ &\longrightarrow \quad & O \\
+& (x,y) & \mapsto\quad & (a,b) = g(x,y) = (x+y, x-y) 
+\end{alignat*}
 
-This transformation is  a bijection if $O$ is defined to be\begin{wrapfigure}{r}{47mm}\includegraphics[width=45mm]{transformation-domain}\vspace{-4mm}\end{wrapfigure}
+\begin{wrapfigure}{r}{32mm}\includegraphics[width=30mm]{transformation-domain}\vspace{10mm}\end{wrapfigure}
+This transformation is  a bijection if $O$ is:
 
 $$O = \{ (a,b)\in\R^2 \mid a+b \geq 0 \mbox{ and } a-b\geq 0\}$$
 
 Its inverse is:
 
 $$ g^{-1}: O \longrightarrow \R^+ \times \R^+$$
-$$ (a,b) \mapsto \left( \frac{1}{2} (a+b), \frac{1}{2}(a-b) \right)$$
+$$ (a,b) \mapsto (x,y) = g^{-1}(a,b) = \left( \frac{1}{2} (a+b), \frac{1}{2}(a-b) \right)$$
 
 because $g^{-1} (g(x,y)) = g^{-1}(x+y, x-y) = \left ( \frac{1}{2} (x+y+x-y), \frac{1}{2} ( x+y-x+y) \right ) = \left ( \frac{1}{2} 2x, \frac{1}{2} 2y\right ) = (x,y)$
 
@@ -56,7 +86,7 @@ We apply the multivariate transformation theorem (\cite[2.7]{Hogg-McKean}) and t
 
 \newcommand{\half}{\frac{1}{2}}
 
-$$J_{g^{-1}} =  
+$$J_{g^{-1}}(a,b) =  
    \frac{\partial g^{-1}_1}{\partial a}\cdot\frac{\partial g^{-1}_2}{\partial b}- \frac{\partial g^{-1}_2}{\partial a}\cdot\frac{\partial g^{-1}_1}{\partial b}
     = \half\cdot-\half-\half\cdot\half=-\frac{1}{2}$$
 
@@ -73,7 +103,7 @@ $$ = \frac{1}{2} \cdot 25(\frac{1}{2}(a+b))e^{-\frac{5}{2}(a+b)}
 then we can compute the density of the variable $A$ which is $X+Y$ as a marginal distribution: 
 
 $$f_A(a) = \int_{b\in\R^+} f_{A,B}(a,b) db = \int _{-a}^{a} \frac{1}{2} \cdot 25(\frac{1}{2}(a+b))e^{-\frac{5}{2}(a+b)} 
-           \cdot 25(\frac{1}{2}(a-b))e^{-\frac{5}{2}(a-b)} = $$
+           \cdot 25(\frac{1}{2}(a-b))e^{-\frac{5}{2}(a-b)}$$
       
 \subsection{Result}
 
