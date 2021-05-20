@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}    
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand\R{{\mathbb R} }
+\renewcommand\S{{\mathcal S}}
+\newcommand\goesto{{\longrightarrow}}
+
+\begin{document}
+\title{A simple $t$-test}
+\date{2021-05-20}
+
+\author{Paul Libbrecht, IUBH Advanced Statistics, \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY}}
+\maketitle
+
+
+
+% =================================================
+
+\section{Statement}
+
+Every claims that the flags of the world are cut along a golden ratio, that is 
+
+$$ \frac{width}{height} = \frac{1}{2} + \frac{\sqrt{5}}{2} \approx 1.618$$
+
+... in average. Evaluate this statement with a signficance of $\alpha = 0.05$.
+
+% ===================================================
+
+\section{Data}
+
+We fetch the data from \url{https://en.wikipedia.org/wiki/Gallery_of_sovereign_state_flags} (TODO: cite) using a little web-page 
+script as follows:
+
+\begin{verbatim}
+f = (img) => { 
+   let countryName = img.parentElement.parentElement.parentElement.parentElement.innerText; 
+   if (countryName.startsWith("Flag of ")) countryName = countryName.substring(8); 
+   let txt = '"' + countryName + '","' + img.width/img.height + '"\n'; 
+   allText = allText + txt; console.log(txt)
+}
+var imgs = jQuery(".mw-parser-output img")
+var allText = ""; imgs.each((n)=>{f(imgs[n]);})
+\end{verbatim}
+
+This obtains the values in the neighbour CSV file with $n=206$ flags and an average of about $1.67$ and standard deviation 
+of $0.257$.
+
+% ===================================================================
+
+\section{Interpretation}
+
+We make the hypothesis that the aspect ratio of the flags $R$ is distributed along a normal distribution $R\sim {\mathcal{N}}(1.618,\sigma)$. Where $\sigma$ is a standard-deviation that we do not know of.
+
+We want to evaluate if the sample that we have follows a normal distribution with the same average with significance $0.01$
+and formulate the hypotheses:
+\begin{itemize}
+\item $H_0$: $\mu_R \approx 1.618$
+\item $H_1$: $\mu_R \not\approx 1.618$
+\end{itemize}
+
+We thus want to apply a two-tailed $t$-test TODO cite. e.g. \cite[theorem 7.4.2]{Larson-Marx} which will allow us
+to reject the $H_0$ in favour of $H1$ if $t\leqslant -t_{\alpha/2,n-1}$ or $t\geqslant t_{\alpha/2,n-1}$
+
+
+% ======================================================================
+
+\section{Theory}
+
+The student-$t$-theorem tells us that, considering $R_1, ..., R_n$ independent normal random variables, the following
+variable follows a Student-$t$-distribution of $n-1$ degrees of freedom:
+
+$$T_{n-1}=\frac{\overline{R}-\mu}{S_{R_1,...R_n}/\sqrt{n}}$$
+
+where $S_{R_1,...R_n}$ is the sample standard deviation. TODO cite
+
+Applying the $t$-test means testing if the probability of having this sample is at least $1-\alpha$.
+
+% ========================================================================
+\section{Computation}
+
+$$t \approx \frac{1.67-1.618}{0.257\cdot\sqrt{206}} \approx 0.014$$
+
+$$t_{\alpha/2,n-1} \approx 1.960$$
+
+So $t$ is by far not less than $-t_{\alpha/2,n-1}$ or bigger than $t_{\alpha/2,n-1}$.
+
+
+
+% ========================================================================
+\section{Conclusion}
+
+We are not able to conclude that the flags follow a different distribution.
+
+
+\bibliographystyle{alpha}
+\bibliography{a-simple-test}
+
+
+
+\end{document}
