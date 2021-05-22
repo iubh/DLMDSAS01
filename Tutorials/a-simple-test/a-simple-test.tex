@@ -31,7 +31,7 @@ $$ \frac{width}{height} = \frac{1}{2} + \frac{\sqrt{5}}{2} \approx 1.618$$
 
 \section{Data}
 
-We fetch the data from \url{https://en.wikipedia.org/wiki/Gallery_of_sovereign_state_flags} (TODO: cite) using a little web-page 
+We fetch the data from \cite{Wikipedia-flags} using a little web-page 
 script as follows:
 
 \begin{verbatim}
@@ -61,8 +61,8 @@ and formulate the hypotheses:
 \item $H_1$: $\mu_R \not\approx 1.618$
 \end{itemize}
 
-We thus want to apply a two-tailed $t$-test TODO cite. e.g. \cite[theorem 7.4.2]{Larson-Marx} which will allow us
-to reject the $H_0$ in favour of $H1$ if $t\leqslant -t_{\alpha/2,n-1}$ or $t\geqslant t_{\alpha/2,n-1}$
+We thus want to apply a two-tailed $t$-test e.g. \cite[theorem 7.4.2]{Larsen-Marx} which will allow us
+to reject the $H_0$ in favour of $H_1$ if $t\leqslant -t_{\alpha/2,n-1}$ or $t\geqslant t_{\alpha/2,n-1}$
 
 
 % ======================================================================
@@ -74,7 +74,7 @@ variable follows a Student-$t$-distribution of $n-1$ degrees of freedom:
 
 $$T_{n-1}=\frac{\overline{R}-\mu}{S_{R_1,...R_n}/\sqrt{n}}$$
 
-where $S_{R_1,...R_n}$ is the sample standard deviation. TODO cite
+where $S_{R_1,...R_n}$ is the sample standard deviation (\cite{NIST-SEMATECH}).
 
 Applying the $t$-test means testing if the probability of having this sample is at least $1-\alpha$.
 
