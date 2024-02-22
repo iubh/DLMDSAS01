@@ -1,8 +1,9 @@
 # On the EM algorithm
 
 ## Core Ideas
-
-...
+* You can observe the world
+* But can you know all the variables?
+* 
 
 
 ## Material
@@ -11,7 +12,7 @@
 	* central element [mixture's fit](https://scikit-learn.org/1.4/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture.fit)
 - Coursebook: section 6.3
 	- with some adjustments
-- Deisenroth et al: from [the book page]()
+- Deisenroth et al: from [the book page](https://mml-book.github.io/)
 
 ## Experiment
 
@@ -21,4 +22,4 @@
 	* then try it
 * Q: 
 	* getting convergence sounds easy?
-	* ways to get trapped
+	* ways to get trapped?
