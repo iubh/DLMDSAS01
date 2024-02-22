@@ -1,9 +1,21 @@
 # On the EM algorithm
 
+## Starter Questions
+* Present "work-plan" (start of mycampus)
+
+* What is your study programme?
+* What's your work-plan?
+* Do you have questions
+
 ## Core Ideas
 * You can observe the world
 * But can you know all the variables?
-* 
+* Some convergence theorems says parameter estimation converges fast
+	* ... if you have all the variables
+	* but slow if you don't!
+* EM aims at calibrating parameters of mixtures
+	* of any combination
+	* examples in 2d in the workbook
 
 
 ## Material
@@ -23,3 +35,6 @@
 * Q: 
 	* getting convergence sounds easy?
 	* ways to get trapped?
+
+
+
