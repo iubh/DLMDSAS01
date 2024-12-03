@@ -12,20 +12,19 @@
 * Measure the phenomenon
 	* ... adjust the model
 	* Using simple or complex recipes
+	* Yields parameters
 
 ## Let's visualize a parameter estimation
 
 notebook
 ... start graphically: try multiple parameters around the histogram of a data
 
-TODO: propose a few models and a few estimators
-
 ## A parameter estimation recipe
 * A process for some distributions
 	* Takes the distribution model in account
 	* Takes some assumption
 	* Takes the data in account; asks you to calculate
-	* Proposes a _best value_
+	* Proposes a _best value_ for the parameters
 * We call an **estimator** such a recipe (or, often, its result)
 * For a parameter θ, we call theta-hat its estimated value (sorry, no unicode char); let's use u and û
 	* often named **point estimator** 
@@ -38,6 +37,8 @@ TODO: propose a few models and a few estimators
 	* well identified parameters
 * Calculate the joint probability of obtaining the given data
 	* this becomes a function of the parameters
+	* in the case of continuous distributions, take the product of density functions evaluated at the data-points
+* The value of θ where the likelihood is a maximum is our MLE Estimator
 
 ## MLE Demo
 * notebook
