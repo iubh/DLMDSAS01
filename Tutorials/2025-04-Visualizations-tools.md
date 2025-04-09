@@ -29,6 +29,7 @@
 	* Draw on board
 	* Handswaving
 	* Sound
+* Multimedia Principle, Meyer & Sweller
 * Moments: first shot, visualize in detail, after-thoughts
 
 ---
@@ -39,7 +40,7 @@
 	* how are they marked? (numbers, units, backgrounds)
 	* bounds
 * Quantity objects
-	* dots, curves, surfaces, ...
+	* dots, curves, colors, surfaces, ...
 * Spot objects
 	* e.g. a movable cursor
 	* extra information
@@ -52,7 +53,7 @@
 * Color / Pixelized / Curves
 * Static (=> Print), Moving or Dynamically Manipulatable
 * Produced by local data?
-* Sharable?
+* Sharable? Screenshots?
 * Web-oriented?
 * Mobile oriented?
 
@@ -61,7 +62,7 @@
 ## Objects of Visualizations
 * Datasets (1 variable, 2 variables, ...)
 * Functions  (1 variable, 2 variables, ...)
-	* More classical: [Desmos](https://www.desmos.com/calculator), [WolframAlpha](https://www.wolframalpha.com/), [Cabri](https://cabricloud.com/cabriexpress/secondary/), [GeoGebra](https://www.geogebra.org/calculator), [Maple](https://maplesoft.com/), [Matlab](https://www.mathworks.com/)...
+	* More classical: [Desmos](https://www.desmos.com/calculator), [WolframAlpha](https://www.wolframalpha.com/), [Cabri](https://cabricloud.com/cabriexpress/secondary/), [GeoGebra](https://www.geogebra.org/calculator), [Maple](https://maplesoft.com/), [Matlab](https://www.mathworks.com/), 
 	* Necessary to interpret function to decide when to show less or more
 * Dependencies between numbers
 * Frequency of numbers in places
@@ -71,8 +72,8 @@
 ## From Datasets to Plots
 
 * automated tools e.g. 
-	* Excel and Spreadsheet, Plotly Dash, Tableau...
-* Python libraries: [Bokeh](https://bokeh.org/), [Matplotlib](https://matplotlib.org/), [Shiny](https://shiny.posit.co/)
+	* Excel and Spreadsheet, Plotly Dash, Tableau, PowerBI...
+* Python libraries: [Bokeh](https://bokeh.org/), [Matplotlib](https://matplotlib.org/), [Shiny](https://shiny.posit.co/), Seaborn...
 * Web libraries
 	* [Plotly](https://plotly.com/), [Rickshaw](https://tech.shutterstock.com/rickshaw/), [Vega Lite](https://vega.github.io/), [D3](https://d3js.org/), ...
 * data exchange oriented: e.g. [CODAP](https://codap.concord.org/), [Datawrapper](https://www.datawrapper.de/), [ObservableHQ](https://observablehq.com/)
@@ -87,7 +88,7 @@
 		* allow "exploration"
 * Lies: Numbers and scales can go big or small
 	* Employing a log-scale can be useful... but... units?
-	* Origins of graph at zero? (e.g. [plotly's](https://chart-studio.plotly.com/~demos/1415.embed)) often discouraged
+	* Origins of graph at zero? (e.g. [plotly's](https://chart-studio.plotly.com/~demos/1415.embed)) often discouraged to not respect
 	* psyschology perception for exaggeration and minimization
 ---
 
@@ -97,7 +98,7 @@
 	* E.g. for 1d-data: Box-and-whiskers, Violin Plot, KDE Curves, see Coursebook
 	* e.g. ObservableHQ showcases a lot, a science that keeps innovating
 * Dependency between numbers often of interest:
-	* Scatter with regression, multiple scatters, 2d-histograms (coursebooks)
+	* Scatter with regression, multiple scatters, 2d-histograms (coursebook)
 	* Confusion matrices, ...
 	* Eikosograms (e.g. [NZ census at school](https://new.censusatschool.org.nz/resource/interactive-visualizations-for-conditional-probability/))
 * Surprises come in the datasets as well so as to debunk a lot of the false beliefs, e.g. the dino dataset
